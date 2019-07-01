@@ -1,7 +1,7 @@
 {
   "name": "build-file-tree-from-object",
   "version": "0.1.0",
-  "description": "Build directories and write files from an object",
+  "description": "Asynchronously build directories and write files from an object",
   "main": "index.js",
   "files": [
     "index.js"

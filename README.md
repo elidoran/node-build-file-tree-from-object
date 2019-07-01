@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/dirator.svg)](http://badge.fury.io/js/build-file-tree-from-object)
 [![Coverage Status](https://coveralls.io/repos/github/elidoran/node-build-file-tree-from-object/badge.svg?branch=master)](https://coveralls.io/github/elidoran/node-build-file-tree-from-object?branch=master)
 
-Build directories and write files from an object.
+Asynchronously build directories and write files from an object.
 
 ## Install
 
