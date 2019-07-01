@@ -31,7 +31,7 @@
     "cover12": "nave use 12 npm run cover",
     "covers": "npm run cover8 -- -- --reporter=silent --nyc-arg=--silent && npm run cover10 -- -- --reporter=silent --nyc-arg=--silent && npm run cover12 -- -- --reporter=silent --nyc-arg=--silent",
     "coverage": "npm run covers && nyc report --reporter=lcov --reporter=text-summary",
-    "travis": "npm run covers && nyc report --reporter=lcov --reporter=text-summary | coveralls"
+    "travis": "npm run covers && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
