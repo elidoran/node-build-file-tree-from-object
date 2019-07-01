@@ -1,0 +1,15 @@
+node_modules
+.nyc_output
+coverage
+build/eslint/cache
+
+# common stuff
+lib-cov
+logs
+*.log
+pids
+*.pid
+*.seed
+.grunt
+.lock-wscript
+build/Release

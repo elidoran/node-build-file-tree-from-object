@@ -1,0 +1,54 @@
+{
+  "name": "build-file-tree-from-object",
+  "version": "0.1.0",
+  "description": "Build directories and write files from an object",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "build",
+    "file",
+    "tree",
+    "directory",
+    "hierarchy",
+    "object"
+  ],
+  "author": "Eli Doran <eli+npm@elidoran.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --no-eslintrc -c build/eslint/eslint.js --cache --cache-location build/eslint/cache index.js",
+    "posttest": "rimraf test/space/**/* && rimraf test/space/**/*",
+    "test": "tap --no-coverage --reporter=spec test/test.js",
+    "test8": "nave use 8 npm test",
+    "test10": "nave use 10 npm test",
+    "test12": "nave use 12 npm test",
+    "tests": "npm run test8 && npm run test10 && npm run test12",
+    "postcover": "npm run posttest",
+    "cover": "tap --nyc-arg=--no-clean test/test.js",
+    "cover8": "nave use 8 npm run cover",
+    "cover10": "nave use 10 npm run cover",
+    "cover12": "nave use 12 npm run cover",
+    "covers": "npm run cover8 -- -- --reporter=silent --nyc-arg=--silent && npm run cover10 -- -- --reporter=silent --nyc-arg=--silent && npm run cover12 -- -- --reporter=silent --nyc-arg=--silent",
+    "coverage": "npm run covers && nyc report --reporter=lcov --reporter=text-summary",
+    "travis": "npm run covers && nyc report --reporter=lcov --reporter=text-summary | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elidoran/node-build-file-tree-from-object.git"
+  },
+  "bugs": "http://github.com/elidoran/node-build-file-tree-from-object/issues",
+  "devDependencies": {
+    "coveralls": "^3.0.4",
+    "eslint": "^6.0.1",
+    "istanbul": "^0.4.5",
+    "rimraf": "^2.6.3",
+    "tap": "^14.3.1"
+  },
+  "dependencies": {
+    "taskling": "^1.3.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}

@@ -1,0 +1,25 @@
+sudo: false
+
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+
+node_js:
+  - "12"
+
+os:
+  - linux
+  - macos
+  - win
+
+matrix:
+  include:
+    - os: linux
+      # reports combined coverage report to coveralls (Node 8, 10, 12)
+      script: npm run travis
+    - os: osx
+      script: npm run coverage
+    - os: win
+      script: npm run coverage
